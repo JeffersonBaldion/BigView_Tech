@@ -21,7 +21,7 @@ export default function Login() {
   const registerRequest = async()=>{
     if(register.Name && register.Email && register.Password){
         try {
-            await axios.post("http://localhost:3000/user/newUser", register)
+            await axios.post("https://big-view-tech-server.vercel.app/user/newUser", register)
             setTitle("Iniciar sesión")
         } catch (error) {
             alert(error)
@@ -33,7 +33,7 @@ export default function Login() {
     if(register.Email && register.Password){
         try {
             console.log(sessionStorage.getItem("Email"))
-            const response = await axios.post("http://localhost:3000/user/getUser", {Password:register.Password, Email:register.Email})
+            const response = await axios.post("https://big-view-tech-server.vercel.app/user/getUser", {Password:register.Password, Email:register.Email})
             console.log(response)
             if(response.data.isSuccess){
                 sessionStorage.setItem("Email", register.Email);
