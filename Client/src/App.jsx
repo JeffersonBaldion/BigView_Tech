@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import LandingPage from "./Views/LandingPage/LandingPage";
 import Header from "./Components/Header/Header";
 
@@ -9,7 +9,10 @@ import React from "react";
 
 function App() {
 
-  const [access, setAccess] = React.useState(false)
+  const navigate = useNavigate()
+  React.useEffect(()=>{
+    {sessionStorage.hasOwnProperty('Email')?null:navigate('/')}
+  },[sessionStorage])
 
   return (
     <div className={style.appContainer}>

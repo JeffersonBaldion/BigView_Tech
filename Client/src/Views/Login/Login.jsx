@@ -32,9 +32,11 @@ export default function Login() {
   const loginRequest = async()=>{
     if(register.Email && register.Password){
         try {
+            console.log(sessionStorage.getItem("Email"))
             const response = await axios.post("http://localhost:3000/user/getUser", {Password:register.Password, Email:register.Email})
             console.log(response)
             if(response.data.isSuccess){
+                sessionStorage.setItem("Email", register.Email);
                 navigate("/home")
             }else{
                 setRegister({Name:"", Email:"", Password:""})
