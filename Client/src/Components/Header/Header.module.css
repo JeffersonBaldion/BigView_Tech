@@ -1,0 +1,79 @@
+.headerContainer{
+    height: 100px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+
+    padding: 0 100px;
+    box-sizing: border-box;
+
+    background-color: var(--main-color);
+    color: var(--back-color);
+}
+
+
+.logoContainer a{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: var(--back-color);
+    font-weight: 900
+}
+
+    .menuContainer{
+        height: 100%;
+        width: min-content;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+
+        .menuContainer img{
+            height: 20px;
+            width: auto;
+            transition: all 200ms;
+        }
+            .menuContainer img:hover{
+                scale: 1.08
+            }
+
+            .menuContainer a{
+                font-size: 1em;
+                text-decoration: none;
+                color: var(--back-color);
+                font-weight: 600
+            }
+
+.searchBarContainer{
+    height: 28px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px ;
+
+    background-color: var(--back-color);
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+    .searchBarContainer input{
+        height: 100%;
+        width: 100%;
+
+        background-color: transparent;
+        border: 0;
+        outline: none;
+    }
+
+    .searchBarContainer img{
+        height: 90%;
+        width: auto;
+    }
