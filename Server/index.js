@@ -8,6 +8,13 @@ const cartRouter = require("./Router/cartRouter.js");
 
 const app = express();
 
+app.listen(3000, async () => {
+  
+    console.log("Server is running on Port 3000");
+
+});
+connectDB();
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
@@ -23,10 +30,6 @@ app.use("/", (req, res)=>{
     res.status(200).send("Hello Big View")
 })
 
-connectDB();
 
-app.listen(3000, async () => {
-  
-    console.log("Server is running on Port 3000");
 
-});
+
