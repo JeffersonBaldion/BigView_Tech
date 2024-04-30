@@ -9,23 +9,23 @@ Para ejecutar el proyecto localmente, sigue estos pasos:
 1. Clona el repositorio de GitHub:
 
    ```sh
-   git clone https://github.com/tu-usuario/big-view-tech.git
+   git clone https://github.com/JeffersonBaldion/BigView-Tech.git
 
 2. Instala las dependencias del frontend y backend:
 
    ```sh
-   cd big-view-tech/frontend
+   cd BigView-Tech/Client
    npm install
-   cd ../backend
+   cd ../Server
    npm install
    
 3. Inicia el servidor de desarrollo tanto para el frontend como para el backend:
 
    ```sh
-   cd big-view-tech/frontend
-   npm run dev
-   cd ../backend
-   npm run dev
+   cd BigView-Tech/Client
+   npm start
+   cd ../Server
+   npm start
 
 4. Accede a la aplicación en tu navegador web:
 
