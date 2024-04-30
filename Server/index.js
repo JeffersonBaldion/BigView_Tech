@@ -12,9 +12,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.use("/", (req, res)=>{
-    res.status(200).send("Hello Big View")
-})
+// app.use("/", (req, res)=>{
+//     res.status(200).send("Hello Big View")
+// })
 app.use("/user", userRouter);
 app.use("/product", productRouter);
 app.use("/cart", cartRouter);
