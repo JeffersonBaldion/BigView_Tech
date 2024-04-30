@@ -11,7 +11,7 @@ function App() {
 
   const navigate = useNavigate()
   React.useEffect(()=>{
-    {sessionStorage.hasOwnProperty('Email')?null:navigate('/')}
+    {sessionStorage.getItem('Email') !== ""?null:navigate('/')}
   },[sessionStorage])
 
   return (

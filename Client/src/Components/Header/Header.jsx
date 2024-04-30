@@ -1,6 +1,7 @@
 import userIcon from "../../assets/userIcon.svg"
 import cartIcon from "../../assets/cartIcon.svg"
 import searchIcon from "../../assets/searchIcon.svg"
+import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 
 import style from "./Header.module.css"
@@ -26,12 +27,12 @@ export default function Header(){
     return(
         <div className={style.headerContainer}>
             <div className={style.logoContainer}>
-                <a href="/">Logo</a>
+                <Link to="/">Logo</Link>
             </div>
             <div className={style.menuContainer}>
-                <a href="/">Home</a>
-                <a href="/catalogo">Catalogo</a>
-                <a href="/catalogo">Contacto</a>
+                <Link to="/home">Home</Link>
+                <Link to="/catalogo">Catalogo</Link>
+                <Link to="/catalogo">Contacto</Link>
                 <img src={cartIcon} alt="" />
                 <img src={userIcon} alt="" />
                 <div className={style.searchBarContainer}>
